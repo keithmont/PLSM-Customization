@@ -1,0 +1,6 @@
+{
+  "name": "PLSM Customization",
+  "description": "Premium vehicle customization, PPF, ceramic coating, window tinting, custom vinyl wraps, and auto detailing portal for PLSM Customization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
