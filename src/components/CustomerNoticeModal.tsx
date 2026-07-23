@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { AlertTriangle, Phone, X, ArrowRight } from 'lucide-react';
-import { BUSINESS_INFO } from '../data';
+import { AlertTriangle, Phone, X, ArrowRight, Mail } from 'lucide-react';
+import plsmLogo from '../assets/images/plsm_logo_1784759145416.jpg';
 
 interface CustomerNoticeModalProps {
   onClose?: () => void;
@@ -29,10 +29,10 @@ export const CustomerNoticeModal: React.FC<CustomerNoticeModalProps> = ({ onClos
           <X className="w-5 h-5" />
         </button>
 
-        {/* Warning / Notice Icon */}
+        {/* Logo & Notice Header */}
         <div className="flex items-center space-x-3 mb-6">
-          <div className="w-12 h-12 bg-[#00E5FF]/20 text-[#00E5FF] border border-[#00E5FF]/40 flex items-center justify-center flex-shrink-0">
-            <AlertTriangle className="w-6 h-6" />
+          <div className="w-12 h-12 bg-black border border-[#00E5FF]/40 flex items-center justify-center p-1 flex-shrink-0">
+            <img src={plsmLogo} alt="PLSM Logo" className="w-full h-full object-contain" />
           </div>
           <div>
             <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#00E5FF] bg-[#00E5FF]/10 border border-[#00E5FF]/30 px-2.5 py-0.5">
@@ -50,10 +50,15 @@ export const CustomerNoticeModal: React.FC<CustomerNoticeModalProps> = ({ onClos
             My website was recently hacked. Apologies for any confusion or inconvenience this may have caused!
           </p>
           <p>
-            Our current site is actively being restored and is a work in progress. All studio services, Paint Protection Film (PPF), Ceramic Coating, and Tinting installations remain fully operational in Columbia, MO.
+            Our current site is actively being restored and is a work in progress. All studio services, Detailing, Ceramic Coating and Customization remain fully operational in Columbia, MO.
           </p>
-          <p className="text-xs text-[#00E5FF] font-mono">
-            Feel free to reach out directly at <a href="tel:5732198800" className="underline font-bold text-white">(573) 219-8800</a> for direct scheduling and questions.
+          <p className="text-xs text-[#00E5FF] font-mono space-y-1">
+            <div>
+              Call or text directly: <a href="tel:5732198800" className="underline font-bold text-white">(573) 219-8800</a>
+            </div>
+            <div>
+              Email us: <a href="mailto:plsmcustomization@gmail.com" className="underline font-bold text-white">plsmcustomization@gmail.com</a>
+            </div>
           </p>
         </div>
 
@@ -64,15 +69,23 @@ export const CustomerNoticeModal: React.FC<CustomerNoticeModalProps> = ({ onClos
             className="flex-1 flex items-center justify-center py-3.5 px-4 bg-[#00E5FF] hover:bg-cyan-300 text-black font-black text-xs uppercase tracking-widest transition-colors shadow-lg shadow-[#00E5FF]/20"
           >
             <Phone className="w-4 h-4 mr-2" />
-            <span>Call Studio: (573) 219-8800</span>
+            <span>Call: (573) 219-8800</span>
+          </a>
+
+          <a
+            href="mailto:plsmcustomization@gmail.com"
+            className="flex items-center justify-center py-3.5 px-4 bg-black hover:bg-neutral-900 text-[#00E5FF] border border-[#00E5FF]/40 text-xs font-bold uppercase tracking-widest transition-colors"
+          >
+            <Mail className="w-4 h-4 mr-1.5" />
+            <span>Email</span>
           </a>
 
           <button
             onClick={handleDismiss}
-            className="flex items-center justify-center py-3.5 px-5 bg-black hover:bg-neutral-900 text-neutral-300 hover:text-white border border-white/20 text-xs font-bold uppercase tracking-widest transition-colors"
+            className="flex items-center justify-center py-3.5 px-4 bg-black hover:bg-neutral-900 text-neutral-300 hover:text-white border border-white/20 text-xs font-bold uppercase tracking-widest transition-colors"
           >
-            <span>Continue To Site</span>
-            <ArrowRight className="w-4 h-4 ml-2 text-[#00E5FF]" />
+            <span>Continue</span>
+            <ArrowRight className="w-4 h-4 ml-1.5 text-[#00E5FF]" />
           </button>
         </div>
 

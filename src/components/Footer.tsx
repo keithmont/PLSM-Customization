@@ -1,6 +1,7 @@
 import React from 'react';
 import { BUSINESS_INFO } from '../data';
 import { ShieldCheck, Phone, Mail, MapPin } from 'lucide-react';
+import plsmLogo from '../assets/images/plsm_logo_1784759145416.jpg';
 
 interface FooterProps {
   onOpenQuote: () => void;
@@ -17,15 +18,12 @@ export const Footer: React.FC<FooterProps> = () => {
           
           {/* Brand Info */}
           <div className="space-y-4 max-w-md">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-[#00E5FF] flex items-center justify-center font-black text-black text-base">
-                PLSM
-              </div>
-              <span className="text-base font-black text-white uppercase tracking-tighter">PLSM Customization</span>
+            <div className="flex items-center space-x-3">
+              <img src={plsmLogo} alt="PLSM Logo" className="h-10 w-auto object-contain" />
             </div>
 
             <p className="text-neutral-400 leading-relaxed text-[11px] font-light">
-              Columbia, Missouri’s premier studio for Paint Protection Film (PPF), multi-year ceramic coatings, nano-ceramic window tinting, custom vinyl wraps, wheel powder coating, and luxury auto detailing.
+              Columbia, Missouri’s premier studio for multi-year ceramic coatings (2, 6, & 10 year), custom vinyl color change wraps, wheel and caliper painting, luxury auto detailing, and System X residential ceramic surface protection.
             </p>
 
             <div className="inline-flex items-center space-x-1.5 text-emerald-400 text-[10px] font-semibold bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 uppercase tracking-wider">
@@ -39,11 +37,15 @@ export const Footer: React.FC<FooterProps> = () => {
             <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-1">Columbia Studio</h4>
             <p className="flex items-center text-[11px] font-light">
               <Phone className="w-3.5 h-3.5 text-[#00E5FF] mr-2 md:order-2 md:ml-2 md:mr-0" />
-              <span>{BUSINESS_INFO.phone}</span>
+              <a href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9]/g, '')}`} className="hover:text-white hover:underline">
+                {BUSINESS_INFO.phone}
+              </a>
             </p>
             <p className="flex items-center text-[11px] font-light">
               <Mail className="w-3.5 h-3.5 text-[#00E5FF] mr-2 md:order-2 md:ml-2 md:mr-0" />
-              <span>{BUSINESS_INFO.email}</span>
+              <a href={`mailto:${BUSINESS_INFO.email}`} className="text-[#00E5FF] hover:underline font-mono">
+                {BUSINESS_INFO.email}
+              </a>
             </p>
             <p className="flex items-start text-[11px] font-light">
               <MapPin className="w-3.5 h-3.5 text-[#00E5FF] mr-2 flex-shrink-0 mt-0.5 md:order-2 md:ml-2 md:mr-0" />

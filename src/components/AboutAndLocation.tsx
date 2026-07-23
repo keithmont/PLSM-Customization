@@ -32,7 +32,7 @@ export const AboutAndLocation: React.FC = () => {
                   Studio Address
                 </div>
                 <p className="text-neutral-300 font-light">{BUSINESS_INFO.address}</p>
-                <p className="text-[10px] text-neutral-500 uppercase tracking-wider">Clean install bays & VIP drop-off</p>
+                <p className="text-[10px] text-neutral-400 uppercase tracking-wider">Clean install bays & VIP drop-off</p>
               </div>
 
               <div className="bg-black p-4 border border-white/10 space-y-1">
@@ -44,14 +44,20 @@ export const AboutAndLocation: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-black p-4 border border-white/10 text-xs text-neutral-300 space-y-2">
+            <div className="bg-black p-4 border border-white/10 text-xs text-neutral-300 space-y-3">
               <div className="font-bold text-white uppercase tracking-wider flex items-center">
                 <Phone className="w-4 h-4 text-[#00E5FF] mr-2" />
-                Direct Line: {BUSINESS_INFO.phone}
+                <span>Direct Line: </span>
+                <a href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9]/g, '')}`} className="text-[#00E5FF] ml-1.5 hover:underline font-mono">
+                  {BUSINESS_INFO.phone}
+                </a>
               </div>
               <div className="font-bold text-white uppercase tracking-wider flex items-center">
                 <Mail className="w-4 h-4 text-[#00E5FF] mr-2" />
-                Studio Email: {BUSINESS_INFO.email}
+                <span>Studio Email: </span>
+                <a href={`mailto:${BUSINESS_INFO.email}`} className="text-[#00E5FF] ml-1.5 hover:underline font-mono">
+                  {BUSINESS_INFO.email}
+                </a>
               </div>
             </div>
           </div>
@@ -96,7 +102,7 @@ export const AboutAndLocation: React.FC = () => {
         <div id="faq" className="max-w-4xl mx-auto pt-8 border-t border-white/10">
           <div className="text-center space-y-2 mb-10">
             <h3 className="text-2xl font-black text-white uppercase tracking-tighter">Frequently Asked Questions</h3>
-            <p className="text-xs text-neutral-400 font-light">Everything you need to know about PPF warranties, ceramic coatings, tint legal limits, and studio scheduling.</p>
+            <p className="text-xs text-neutral-400 font-light">Everything you need to know about ceramic coating lifespans (2, 6, 10-Yr), wheel and caliper painting, residential coatings, and studio scheduling.</p>
           </div>
 
           <div className="space-y-3">

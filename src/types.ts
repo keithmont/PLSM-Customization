@@ -1,4 +1,4 @@
-export type CustomizationMethod = 'ppf' | 'ceramic_coating' | 'window_tint' | 'vinyl_wrap' | 'wheel_caliper' | 'premium_detail';
+export type CustomizationMethod = 'ceramic_coating' | 'vinyl_wrap' | 'wheel_caliper' | 'residential_coating' | 'premium_detail';
 
 export interface BusinessService {
   id: string;

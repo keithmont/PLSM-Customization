@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Calendar } from 'lucide-react';
-import { BUSINESS_INFO } from '../data';
+import plsmLogo from '../assets/images/plsm_logo_1784759145416.jpg';
 
 interface HeaderProps {
   activeTab: string;
@@ -34,15 +34,16 @@ export const Header: React.FC<HeaderProps> = ({
           
           {/* Logo & Brand Name */}
           <div className="flex items-center space-x-3 cursor-pointer group" onClick={() => handleNavClick('home')}>
-            <div className="w-11 h-11 bg-[#00E5FF] font-black text-black text-xl flex items-center justify-center tracking-tighter shadow-lg shadow-[#00E5FF]/20 border border-[#00E5FF]">
-              PLSM
+            <div className="h-12 w-auto flex items-center">
+              <img
+                src={plsmLogo}
+                alt="PLSM Customization Logo"
+                className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+              />
             </div>
-            <div>
-              <div className="text-xl font-black tracking-tighter uppercase flex items-center gap-1.5 text-white">
-                PLSM <span className="text-[#00E5FF] font-light text-lg tracking-widest">Customization</span>
-              </div>
-              <p className="text-[10px] text-neutral-400 font-light uppercase tracking-[0.2em] hidden sm:block">
-                Precision Auto Aesthetics • Columbia, MO
+            <div className="hidden sm:block border-l border-white/20 pl-3">
+              <p className="text-[10px] text-neutral-300 font-mono uppercase tracking-[0.2em]">
+                Columbia, MO • Studio
               </p>
             </div>
           </div>

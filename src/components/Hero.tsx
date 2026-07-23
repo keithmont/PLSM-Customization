@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, CheckCircle2, Clock, Car, Award, Calendar } from 'lucide-react';
+import { ShieldCheck, CheckCircle2, Clock, Award, Calendar } from 'lucide-react';
 import { BUSINESS_INFO } from '../data';
 import { VehicleBrandStrip } from './BrandLogos';
 
@@ -34,7 +34,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote }) => {
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-neutral-300 max-w-2xl leading-relaxed font-normal">
-              Columbia’s premier studio for Paint Protection Film (PPF), multi-year ceramic coatings, nano-ceramic heat rejection window tinting, custom vinyl wraps, chrome deletes, and wheel powder coating.
+              Columbia’s premier studio for multi-year ceramic coatings (2, 6, & 10 year), custom vinyl color change wraps, wheel and caliper painting, luxury auto detailing, and System X residential ceramic coatings.
             </p>
 
             {/* Key Value Bullets */}
@@ -48,8 +48,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote }) => {
                 <span className="uppercase tracking-wider">Dust-Free Clean Bays</span>
               </div>
               <div className="flex items-center space-x-2 bg-black p-3 border border-white/10">
-                <Car className="w-4 h-4 text-[#00E5FF] flex-shrink-0" />
-                <span className="uppercase tracking-wider">Precision Laser Cuts</span>
+                <ShieldCheck className="w-4 h-4 text-[#00E5FF] flex-shrink-0" />
+                <span className="uppercase tracking-wider">Master Technicians</span>
               </div>
             </div>
 
@@ -74,15 +74,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote }) => {
             {/* Social Proof Stats */}
             <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 text-center sm:text-left">
               <div>
-                <div className="text-2xl font-black text-[#00E5FF] tracking-tight">2,500+</div>
-                <div className="text-[11px] uppercase tracking-wider text-neutral-400">Vehicles Customized</div>
+                <div className="text-xl sm:text-2xl font-black text-[#00E5FF] tracking-tight">10+ Years</div>
+                <div className="text-[11px] uppercase tracking-wider text-neutral-400">Industry Experience & Award Recipient</div>
               </div>
               <div>
-                <div className="text-2xl font-black text-white tracking-tight">{BUSINESS_INFO.googleRating} ★</div>
-                <div className="text-[11px] uppercase tracking-wider text-neutral-400">{BUSINESS_INFO.reviewsCount} Verified Reviews</div>
+                <div className="text-xl sm:text-2xl font-black text-white tracking-tight">210+</div>
+                <div className="text-[11px] uppercase tracking-wider text-neutral-400">Over 210 5 Star Reviews</div>
               </div>
               <div>
-                <div className="text-2xl font-black text-[#00E5FF] tracking-tight">Certified</div>
+                <div className="text-xl sm:text-2xl font-black text-[#00E5FF] tracking-tight">Certified</div>
                 <div className="text-[11px] uppercase tracking-wider text-neutral-400">Master Install Studio</div>
               </div>
             </div>
@@ -116,12 +116,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote }) => {
                 </div>
 
                 <p className="text-xs text-neutral-400 leading-relaxed font-light">
-                  Our dust-free clean bays, computerized precision plotters, and master certified technicians ensure seamless wrapped edges, zero bubbles, and optical perfection.
+                  Our dust-free clean bays, master certified technicians, and top-tier materials ensure flawless wrapped edges, deep gloss reflections, and uncompromised finish quality.
                 </p>
 
                 <div className="flex items-center justify-between text-xs text-neutral-400 pt-2 border-t border-white/10">
-                  <span className="uppercase text-[11px] tracking-wider">📍 6700 Stephens Station Rd #105</span>
-                  <span className="text-[#00E5FF] font-semibold text-[11px] uppercase tracking-wider">(573) 219-8800</span>
+                  <span className="uppercase text-[11px] tracking-wider">📍 {BUSINESS_INFO.address}</span>
+                  <span className="text-[#00E5FF] font-semibold text-[11px] uppercase tracking-wider">{BUSINESS_INFO.phone}</span>
                 </div>
               </div>
 

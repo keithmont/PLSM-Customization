@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SERVICES } from '../data';
 import { BusinessService } from '../types';
-import { Shield, Sparkles, Sun, Palette, Circle, Droplet, ArrowRight, Check, Clock } from 'lucide-react';
+import { Sparkles, Palette, Circle, Droplet, Home, ArrowRight, Check, Clock } from 'lucide-react';
 
 interface ServicesSectionProps {
   onSelectService: (service: BusinessService) => void;
@@ -12,12 +12,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
 
   const getServiceIcon = (method: string) => {
     switch (method) {
-      case 'ppf': return <Shield className="w-5 h-5 text-[#00E5FF]" />;
       case 'ceramic_coating': return <Sparkles className="w-5 h-5 text-[#00E5FF]" />;
-      case 'window_tint': return <Sun className="w-5 h-5 text-[#00E5FF]" />;
       case 'vinyl_wrap': return <Palette className="w-5 h-5 text-[#00E5FF]" />;
       case 'wheel_caliper': return <Circle className="w-5 h-5 text-[#00E5FF]" />;
       case 'premium_detail': return <Droplet className="w-5 h-5 text-[#00E5FF]" />;
+      case 'residential_coating': return <Home className="w-5 h-5 text-[#00E5FF]" />;
       default: return <Sparkles className="w-5 h-5 text-[#00E5FF]" />;
     }
   };
@@ -29,13 +28,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center space-x-2 bg-[#00E5FF]/10 border border-[#00E5FF]/30 px-3 py-1 text-xs font-bold text-[#00E5FF] uppercase tracking-widest">
-            Studio Services & Protection
+            Studio Services & Surface Protection
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tighter uppercase">
             Vehicle Customization & Detailing Services
           </h2>
           <p className="text-neutral-300 text-sm sm:text-base leading-relaxed font-light">
-            Engineered for high performance, luxury protection, and head-turning automotive aesthetics. Select a service below to schedule studio time or book an appointment at our Columbia location.
+            Engineered for high performance, luxury protection, and head-turning aesthetics. Select a service below to review specifications or schedule studio time.
           </p>
         </div>
 
@@ -87,7 +86,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                   </div>
 
                   <div className="pt-2 text-xs text-neutral-400">
-                    <span className="font-semibold text-neutral-200 uppercase text-[11px] tracking-wider">Popular Vehicles: </span>
+                    <span className="font-semibold text-neutral-200 uppercase text-[11px] tracking-wider">Ideal For: </span>
                     {service.popularFor}
                   </div>
                 </div>
@@ -142,7 +141,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             </p>
 
             <div className="space-y-3">
-              <h4 className="text-xs font-bold text-[#00E5FF] uppercase tracking-widest">Service Specifications & Warranty</h4>
+              <h4 className="text-xs font-bold text-[#00E5FF] uppercase tracking-widest">Service Specifications & Protection</h4>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {selectedModalService.features.map((f, i) => (
                   <li key={i} className="flex items-start text-xs text-neutral-300 bg-black p-2.5 border border-white/10">
