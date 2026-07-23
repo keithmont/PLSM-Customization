@@ -1,7 +1,7 @@
 import React from 'react';
 import { BUSINESS_INFO } from '../data';
 import { ShieldCheck, Phone, Mail, MapPin } from 'lucide-react';
-import plsmLogo from '../assets/images/plsm_logo_1784759145416.jpg';
+import { PlsmLogo } from './PlsmLogo';
 
 interface FooterProps {
   onOpenQuote: () => void;
@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = () => {
           {/* Brand Info */}
           <div className="space-y-4 max-w-md">
             <div className="flex items-center space-x-3">
-              <img src={plsmLogo} alt="PLSM Logo" className="h-10 w-auto object-contain" />
+              <PlsmLogo className="h-10 w-auto" />
             </div>
 
             <p className="text-neutral-400 leading-relaxed text-[11px] font-light">

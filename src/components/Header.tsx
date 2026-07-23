@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Calendar } from 'lucide-react';
-import plsmLogo from '../assets/images/plsm_logo_1784759145416.jpg';
+import { PlsmLogo } from './PlsmLogo';
 
 interface HeaderProps {
   activeTab: string;
@@ -35,11 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Logo & Brand Name */}
           <div className="flex items-center space-x-3 cursor-pointer group" onClick={() => handleNavClick('home')}>
             <div className="h-12 w-auto flex items-center">
-              <img
-                src={plsmLogo}
-                alt="PLSM Customization Logo"
-                className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
-              />
+              <PlsmLogo className="h-10 sm:h-11 w-auto transition-transform group-hover:scale-105" />
             </div>
             <div className="hidden sm:block border-l border-white/20 pl-3">
               <p className="text-[10px] text-neutral-300 font-mono uppercase tracking-[0.2em]">

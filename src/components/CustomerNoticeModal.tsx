@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AlertTriangle, Phone, X, ArrowRight, Mail } from 'lucide-react';
-import plsmLogo from '../assets/images/plsm_logo_1784759145416.jpg';
+import { PlsmLogo } from './PlsmLogo';
 
 interface CustomerNoticeModalProps {
   onClose?: () => void;
@@ -31,8 +31,8 @@ export const CustomerNoticeModal: React.FC<CustomerNoticeModalProps> = ({ onClos
 
         {/* Logo & Notice Header */}
         <div className="flex items-center space-x-3 mb-6">
-          <div className="w-12 h-12 bg-black border border-[#00E5FF]/40 flex items-center justify-center p-1 flex-shrink-0">
-            <img src={plsmLogo} alt="PLSM Logo" className="w-full h-full object-contain" />
+          <div className="h-10 w-auto bg-black border border-[#00E5FF]/40 flex items-center justify-center p-1 flex-shrink-0">
+            <PlsmLogo className="h-8 w-auto" />
           </div>
           <div>
             <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#00E5FF] bg-[#00E5FF]/10 border border-[#00E5FF]/30 px-2.5 py-0.5">

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { BUSINESS_INFO } from '../data';
 import { BusinessService, CatalogItem } from '../types';
 import { Calendar, Clock, MapPin, Phone, ShieldCheck, X, CheckCircle, ExternalLink, Send, Mail } from 'lucide-react';
-import plsmLogo from '../assets/images/plsm_logo_1784759145416.jpg';
+import { PlsmLogo } from './PlsmLogo';
 
 interface SquareBookingModalProps {
   initialService?: BusinessService | null;
@@ -51,7 +51,7 @@ export const SquareBookingModal: React.FC<SquareBookingModalProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between border-b border-white/10 pb-6 mb-8">
         <div className="flex items-center space-x-4">
-          <img src={plsmLogo} alt="PLSM Logo" className="h-12 w-auto object-contain hidden sm:block" />
+          <PlsmLogo className="h-10 w-auto hidden sm:block" />
           <div>
             <div className="inline-flex items-center space-x-2 bg-[#00E5FF]/10 border border-[#00E5FF]/30 px-3 py-1 text-xs font-bold text-[#00E5FF] uppercase tracking-widest mb-1">
               Square Appointments Live Booking
