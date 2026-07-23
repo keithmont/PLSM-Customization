@@ -3,7 +3,7 @@ import { BusinessService, FAQItem } from './types';
 export const BUSINESS_INFO = {
   name: "PLSM Customization",
   tagline: "Columbia's Premier Vehicle Customization, Ceramic Coating & Detailing Studio",
-  about: "PLSM Customization is Columbia, Missouri's leading auto customization, ceramic coating, wheel and caliper painting, luxury auto detailing, and residential ceramic surface protection studio. Driven by over 10 years of industry experience, clean install bays, and multiple award-winning craftsmanship.",
+  about: "PLSM Customization is Columbia, Missouri's leading auto customization, ceramic coating, wheel and caliper painting, luxury auto detailing, and residential ceramic surface protection studio. Driven by over 10 years of industry experience and multiple award-winning craftsmanship.",
   address: "6700 Stephens Station Rd #105, Columbia, MO 65202",
   phone: "(573) 219-8800",
   email: "plsmcustomization@gmail.com",

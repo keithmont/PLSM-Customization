@@ -32,7 +32,6 @@ export const AboutAndLocation: React.FC = () => {
                   Studio Address
                 </div>
                 <p className="text-neutral-300 font-light">{BUSINESS_INFO.address}</p>
-                <p className="text-[10px] text-neutral-400 uppercase tracking-wider">Clean install bays & VIP drop-off</p>
               </div>
 
               <div className="bg-black p-4 border border-white/10 space-y-1">
