@@ -5,7 +5,6 @@ import { ServicesSection } from './components/ServicesSection';
 import { SquareBookingModal } from './components/SquareBookingModal';
 import { AboutAndLocation } from './components/AboutAndLocation';
 import { Footer } from './components/Footer';
-import { CustomerNoticeModal } from './components/CustomerNoticeModal';
 import { BusinessService } from './types';
 import { Calendar } from 'lucide-react';
 
@@ -22,9 +21,6 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#080808] font-sans text-white flex flex-col selection:bg-[#00E5FF] selection:text-black">
       
-      {/* Lightbox Modal Announcement */}
-      <CustomerNoticeModal />
-
       {/* Main Navbar */}
       <Header
         activeTab={activeTab}
